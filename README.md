@@ -17,7 +17,7 @@ make all
 ### 🔨 Compile a Specific Day
 
 ```sh
-make day01
+make build/day01
 ```
 
 ### ▶️ Run a Solution
