@@ -2,7 +2,7 @@ CPP := clang++
 BUILD_DIR := build
 SRC_DIR := src
 
-TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03 $(BUILD_DIR)/day04 $(BUILD_DIR)/day05 $(BUILD_DIR)/day06 $(BUILD_DIR)/day07 $(BUILD_DIR)/day08 $(BUILD_DIR)/day09 $(BUILD_DIR)/day10 $(BUILD_DIR)/day11 $(BUILD_DIR)/day12 $(BUILD_DIR)/day13 $(BUILD_DIR)/day14
+TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03 $(BUILD_DIR)/day04 $(BUILD_DIR)/day05 $(BUILD_DIR)/day06 $(BUILD_DIR)/day07 $(BUILD_DIR)/day08 $(BUILD_DIR)/day09 $(BUILD_DIR)/day10 $(BUILD_DIR)/day11 $(BUILD_DIR)/day12 $(BUILD_DIR)/day13 $(BUILD_DIR)/day14 $(BUILD_DIR)/day15 $(BUILD_DIR)/day16
 
 all: $(TARGETS)
 
@@ -56,6 +56,12 @@ $(BUILD_DIR)/day13: $(BUILD_DIR)/day13.o | $(BUILD_DIR)
 	$(CPP) -o $@ $^
 
 $(BUILD_DIR)/day14: $(BUILD_DIR)/day14.o $(BUILD_DIR)/util/md5.o | $(BUILD_DIR)
+	$(CPP) -o $@ $^
+
+$(BUILD_DIR)/day15: $(BUILD_DIR)/day15.o  | $(BUILD_DIR)
+	$(CPP) -o $@ $^
+
+$(BUILD_DIR)/day16: $(BUILD_DIR)/day16.o  | $(BUILD_DIR)
 	$(CPP) -o $@ $^
 
 clean:
