@@ -2,7 +2,7 @@ CPP := clang++
 BUILD_DIR := build
 SRC_DIR := src
 
-TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03
+TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03 $(BUILD_DIR)/day04
 
 all: $(TARGETS)
 
@@ -23,6 +23,9 @@ $(BUILD_DIR)/day02: $(BUILD_DIR)/day02.o $(BUILD_DIR)/util/point.o | $(BUILD_DIR
 	$(CPP) -o $@ $^
 
 $(BUILD_DIR)/day03: $(BUILD_DIR)/day03.o | $(BUILD_DIR)
+	$(CPP) -o $@ $^
+
+$(BUILD_DIR)/day04: $(BUILD_DIR)/day04.o | $(BUILD_DIR)
 	$(CPP) -o $@ $^
 
 clean:
