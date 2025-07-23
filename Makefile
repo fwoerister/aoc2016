@@ -2,7 +2,7 @@ CPP := clang++
 BUILD_DIR := build
 SRC_DIR := src
 
-TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03 $(BUILD_DIR)/day04 $(BUILD_DIR)/day05 $(BUILD_DIR)/day06 $(BUILD_DIR)/day07 $(BUILD_DIR)/day08 $(BUILD_DIR)/day09 $(BUILD_DIR)/day10 $(BUILD_DIR)/day11
+TARGETS := $(BUILD_DIR)/day01 $(BUILD_DIR)/day02 $(BUILD_DIR)/day03 $(BUILD_DIR)/day04 $(BUILD_DIR)/day05 $(BUILD_DIR)/day06 $(BUILD_DIR)/day07 $(BUILD_DIR)/day08 $(BUILD_DIR)/day09 $(BUILD_DIR)/day10 $(BUILD_DIR)/day11 $(BUILD_DIR)/day12
 
 all: $(TARGETS)
 
@@ -47,6 +47,9 @@ $(BUILD_DIR)/day10: $(BUILD_DIR)/day10.o | $(BUILD_DIR)
 	$(CPP) -o $@ $^
 
 $(BUILD_DIR)/day11: $(BUILD_DIR)/day11.o | $(BUILD_DIR)
+	$(CPP) -o $@ $^
+
+$(BUILD_DIR)/day12: $(BUILD_DIR)/day12.o $(BUILD_DIR)/util/emulator.o $(BUILD_DIR)/util/instructions.o | $(BUILD_DIR)
 	$(CPP) -o $@ $^
 
 clean:
